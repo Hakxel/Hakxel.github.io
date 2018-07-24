@@ -7,6 +7,10 @@ function activateGallery() {
   let mainImage = document.querySelector("#gallery-photo img");
 
   thumbnails.forEach(function(thumbnail) {
+    // Preload large images.
+    largeVersion = new Image();
+    largeVersion.src = thumbnail.dataset.largeVersion;
+    
     thumbnail.addEventListener("click", function() {
       // Set clicked image as display image.
       let newImageSrc = thumbnail.dataset.largeVersion;
