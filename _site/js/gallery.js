@@ -26,4 +26,4 @@ function activateGallery() {
       description.innerHTML = thumbnail.dataset.description;
     });
   });
-}
+};
